@@ -1,0 +1,24 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int ans;
+    int n;
+    cin >> n;
+    int nums[n];
+    
+    for (int i = 0; i < n; i++)
+    {
+        cin >> nums[i];
+    }
+    int actual_sum = n * (n + 1) / 2;
+    int current_sum = 0;
+    
+    for (int i = 0; i < n-1; i++) {
+        current_sum += nums[i];
+    }
+    ans = actual_sum - current_sum;
+    cout << ans;
+    return 0;
+}
